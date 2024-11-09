@@ -1,0 +1,57 @@
+@startuml
+object Pokemon
+Pokemon : From ru.ifmo.se.pokemon
+
+object Virizion
+object Nosepass
+object Probopass
+object Lotad
+object Lombre
+object Ludicolo
+
+Virizion --|> Pokemon
+Nosepass --|> Pokemon
+Probopass --|> Nosepass
+Lotad --|>Pokemon
+Lombre --|> Lotad
+Ludicolo --|> Lombre
+
+
+object PhysicalMove
+PhysicalMove : From ru.ifmo.se.pokemon
+
+object BullZone
+object RockTomb
+object TakeDown
+object X_Scissor
+
+BullZone --|> PhysicalMove
+RockTomb --|> PhysicalMove
+TakeDown --|> PhysicalMove
+X_Scissor --|> PhysicalMove
+
+object SpecialMove
+SpecialMove : From ru.ifmo.se.pokemon
+
+object DoubleTeam
+object EarthPower
+object FocusBlast
+object HydroPump
+object IceBeam
+object TriAttack
+
+
+EarthPower --|> SpecialMove
+DoubleTeam --|> SpecialMove
+FocusBlast --|> SpecialMove
+HydroPump --|> SpecialMove
+TriAttack --|> SpecialMove
+IceBeam --|> SpecialMove
+
+object StatusMove
+StatusMove : From ru.ifmo.se.pokemon
+
+object SwordsDance
+
+
+SwordsDance --|> StatusMove
