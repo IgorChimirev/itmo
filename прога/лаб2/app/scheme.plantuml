@@ -1,57 +1,200 @@
 @startuml
+skinparam Linetype ortho
+
 object Pokemon
 Pokemon : From ru.ifmo.se.pokemon
 
-object Virizion
-object Nosepass
-object Probopass
-object Lotad
-object Lombre
-object Ludicolo
+package mypokemons {
+    class Lombre {
+        name: String
+        level: int
+        +Lombre()
+    }
 
-Virizion --|> Pokemon
+    class Lotad {
+        name: String
+        level: int
+        +Lotad()
+    }
+
+    class Ludicolo {
+        name: String
+        level: int
+        +Ludicolo()
+    }
+
+    class Nosepass {
+        name: String
+        level: int
+        +Nosepass()
+    }
+
+    class Probopass {
+        name: String
+        level: int
+        +Probopass()
+    }
+
+    class Virizion {
+    name: String
+    level: int
+    +Virizion()
+}
+}
+
+Lombre --|> Lotad
+Lotad --|> Pokemon
+Ludicolo --|>Lombre
 Nosepass --|> Pokemon
 Probopass --|> Nosepass
-Lotad --|>Pokemon
-Lombre --|> Lotad
-Ludicolo --|> Lombre
+Virizion --|> Pokemon
 
+package moves{
+    package physical{
+        class BullZone {
+            type: Type
+            pow: double
+            acc: double
+            +Bull Zone()
+#applyOppEffects(): void
+            #describe(): String
+        }
+class XScissor {
+            type: Type
+            pow: double
+            acc: double
+            +XScissor()
+            #describe(): String
+        }
+        class RockTomb {
+            type: Type
+            pow: double
+            acc: double
+            +RockTomb()
+            #applyOppEffects(): void
+            #describe(): String
+        }
+        class TakeDown {
+            type: Type
+            pow: double
+            acc: double
+            +TakeDown()
+            #applySelfEffects(): void
+            #describe(): String
+        }
+    }
 
+    package special {
+        class DoubleTeam {
+            type: Type
+            pow: double
+            acc: double
+            +DoubleTeam()
+            #applyOppEffects(): void
+            #describe(): String
+        }
+        class EarthPower {
+            type: Type
+            pow: double
+            acc: double
+            +EarthPower()
+            #applyOppEffects(): void
+            #describe(): String
+        }
+        class FocusBlast {
+            type: Type
+            pow: double
+            acc: double
+            +FocusBlast()
+            #applyOppEffects(): void
+            #describe(): String
+        }
+        class HydroPump {
+            type: Type
+            pow: double
+            acc: double
+            +HydroPump()
+        
+            #describe(): String
+        }
+        class IceBeam {
+            type: Type
+            pow: double
+            acc: double
+            +IceBeam()
+            #applyOppEffects(): void
+            #describe(): String
+        }
+class TriAttack {
+            type: Type
+            pow: double
+            acc: double
+            +TriAttack()
+            #applyOppEffects(): void
+            #describe(): String
+        }
+
+    }
+
+    package status {
+        class SwordsDance {
+            type: Type
+            pow: double
+            acc: double
+            +SwordsDance()
+            #applySelfEffects(): void
+            #describe(): String
+        }
+     
+    }
+}
+
+object SpecialMove
+SpecialMove :  ru.ifmo.se.pokemon
+object StatusMove
+StatusMove :  ru.ifmo.se.pokemon
 object PhysicalMove
-PhysicalMove : From ru.ifmo.se.pokemon
+PhysicalMove :  ru.ifmo.se.pokemon
 
-object BullZone
-object RockTomb
-object TakeDown
-object X_Scissor
+
+DoubleTeam --|> SpecialMove
+EarthPower --|> SpecialMove
+FocusBlast --|> SpecialMove
+HydroPump --|> SpecialMove
+IceBeam --|> SpecialMove
+TriAttack --|> SpecialMove
 
 BullZone --|> PhysicalMove
 RockTomb --|> PhysicalMove
 TakeDown --|> PhysicalMove
-X_Scissor --|> PhysicalMove
-
-object SpecialMove
-SpecialMove : From ru.ifmo.se.pokemon
-
-object DoubleTeam
-object EarthPower
-object FocusBlast
-object HydroPump
-object IceBeam
-object TriAttack
-
-
-EarthPower --|> SpecialMove
-DoubleTeam --|> SpecialMove
-FocusBlast --|> SpecialMove
-HydroPump --|> SpecialMove
-TriAttack --|> SpecialMove
-IceBeam --|> SpecialMove
-
-object StatusMove
-StatusMove : From ru.ifmo.se.pokemon
-
-object SwordsDance
-
+XScissor --|> PhysicalMove
 
 SwordsDance --|> StatusMove
+
+
+Lombre o-- DoubleTeam
+Lombre o-- IceBeam
+Lombre o-- HydroPump
+
+Lotad o-- DoubleTeam
+Lotad o-- IceBeam
+
+
+Ludicolo o-- DoubleTeam
+Ludicolo o-- IceBeam
+Ludicolo o-- HydroPump
+Ludicolo o-- SwordsDance
+
+Nosepass o-- RockTomb
+Nosepass o-- BullZone
+Nosepass o-- EarthPower
+
+Probopass o-- RockTomb
+Probopass o-- BullZone
+Probopass o-- EarthPower
+Probopass o-- TriAttack
+
+Virizion o-- FocusBlast
+Virizion o--  DoubleTeam
+Virizion o-- TakeDown
+Virizion o-- XScissor
