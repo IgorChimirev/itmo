@@ -1,0 +1,24 @@
+<root>
+  <lesson>
+    <name>Дискретная математика (прак)</name>
+    <place>Кронверкский пр., д.49, лит.А</place>
+    <classroom>403</classroom>
+    <startTime>10:00</startTime>
+    <endTime>11:30</endTime>
+    <professor>Поляков Владимир Иванович</professor>
+    <presencial>True</presencial>
+    <online>True</online>
+    <oddWeek>True</oddWeek>
+  </lesson>
+  <lesson>
+    <name>Дискретная математика(прак)</name>
+    <place>Кронверкский пр., д.49, лит.А</place>
+    <classroom>403</classroom>
+    <startTime>11:40</startTime>
+    <endTime>13:10</endTime>
+    <professor>Поляков Владимир Иванович</professor>
+    <presencial>True</presencial>
+    <online>True</online>
+    <oddWeek>True</oddWeek>
+  </lesson>
+</root>
