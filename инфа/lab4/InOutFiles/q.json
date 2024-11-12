@@ -1,0 +1,26 @@
+{
+    "lessons": [
+        {
+            "name": "Дискретная математика (прак)",
+            "place": "Кронверкский пр., д.49, лит.А",
+            "classroom": "403",
+            "startTime": "10:00",
+            "endTime": "11:30",
+            "professor": "Поляков Владимир Иванович",
+            "presencial": true,
+            "online": true,
+            "oddWeek": true
+        },
+        {
+            "name": "Дискретная математика(прак)",
+            "place": "Кронверкский пр., д.49, лит.А",
+            "classroom": "403",
+            "startTime": "11:40",
+            "endTime": "13:10",
+            "professor": "Поляков Владимир Иванович",
+            "presencial": true,
+            "online": true,
+            "oddWeek": true
+        }
+    ]
+}
