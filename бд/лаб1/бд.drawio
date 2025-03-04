@@ -1,0 +1,192 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Страница — 1" id="EMzj63WoPIzjIj_6Cs6i">
+    <mxGraphModel dx="3359" dy="1382" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mVhNf065fgTi1jN2UXXa-123" value="Storage Influence" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1081" y="80" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-124" value="+id&lt;div&gt;+Starage id&lt;/div&gt;&lt;div&gt;+diaspar id&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-123">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-125" value="Diaspar" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1081" y="270" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-126" value="+id&lt;div&gt;+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Culture_City_Name&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Location&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-125">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-127" value="&lt;pre style=&quot;font-family: var(--ds-font-family-code); overflow: auto; padding: calc(var(--ds-md-zoom)*8px)calc(var(--ds-md-zoom)*12px); text-wrap: wrap; word-break: break-all; color: rgb(255, 255, 255); font-size: 12.573px; text-align: start; margin-top: 0px !important; margin-bottom: 0px !important;&quot;&gt;Cultural_Differences&lt;/pre&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="230" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-128" value="+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Difference_ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Characteristic&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Odvin_Culture_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Hidvar_Culture_ID&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-127">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-131" value="&lt;pre style=&quot;font-family: var(--ds-font-family-code); overflow: auto; padding: calc(var(--ds-md-zoom)*8px)calc(var(--ds-md-zoom)*12px); text-wrap: wrap; word-break: break-all; color: rgb(255, 255, 255); font-size: 12.573px; text-align: start; margin-top: 0px !important; margin-bottom: 0px !important;&quot;&gt;Cultural_Affiliation&lt;/pre&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="585" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-132" value="+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Affiliation_ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Odvin_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Hidvar_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Culture_ID&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-131">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-134" value="&lt;pre style=&quot;font-family: var(--ds-font-family-code); overflow: auto; padding: calc(var(--ds-md-zoom)*8px)calc(var(--ds-md-zoom)*12px); text-wrap: wrap; word-break: break-all; color: rgb(255, 255, 255); font-size: 12.573px; text-align: start; margin-top: 0px !important; margin-bottom: 0px !important;&quot;&gt;Forest_Inhabitants&lt;/pre&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="413" y="750" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-135" value="+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Inhabitant_ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+Name&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+location&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-134">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-141" value="Person" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="330" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-142" value="+id&lt;div&gt;+Name&lt;/div&gt;&lt;div&gt;+gender&lt;/div&gt;&lt;div&gt;+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Current_Location&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-141">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-145" value="Memory_Storage" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="610" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-146" value="+id&lt;div&gt;+titile&lt;/div&gt;&lt;div&gt;+Location&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-145">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-147" value="&lt;pre style=&quot;font-family: var(--ds-font-family-code); overflow: auto; padding: calc(var(--ds-md-zoom)*8px)calc(var(--ds-md-zoom)*12px); text-wrap: wrap; word-break: break-all; color: rgb(255, 255, 255); font-size: 12.573px; text-align: start; margin-top: 0px !important; margin-bottom: 0px !important;&quot;&gt;Shadow_Observation&lt;/pre&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="557" y="570" width="163" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-148" value="+id&lt;div&gt;+Start time&lt;/div&gt;&lt;div&gt;+end time&lt;/div&gt;&lt;div&gt;+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;Inhabitant_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Odvin_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Night_ID&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-147">
+          <mxGeometry y="50" width="163" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-154" value="Night" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="717" y="770" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-155" value="+id&lt;div&gt;+Time of day&lt;/div&gt;&lt;div&gt;+starts present&lt;/div&gt;&lt;div&gt;+ total darkness&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-154">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-158" value="Mystery" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="305" width="180" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-159" value="+id&lt;div&gt;+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Description&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Related_Events&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Unsolved&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Person_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Diaspar_ID&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-158">
+          <mxGeometry y="50" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-162" value="&lt;pre style=&quot;font-family: var(--ds-font-family-code); overflow: auto; padding: calc(var(--ds-md-zoom)*8px)calc(var(--ds-md-zoom)*12px); text-wrap: wrap; word-break: break-all; color: rgb(255, 255, 255); font-size: 12.573px; text-align: start; margin-top: 0px !important; margin-bottom: 0px !important;&quot;&gt;Odvin_Satisfaction&lt;/pre&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="90" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-163" value="+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Satisfaction_ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Emotional_State&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Reason&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Odvin_ID&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-162">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-164" value="&lt;pre style=&quot;font-family: var(--ds-font-family-code); overflow: auto; padding: calc(var(--ds-md-zoom)*8px)calc(var(--ds-md-zoom)*12px); text-wrap: wrap; word-break: break-all; color: rgb(255, 255, 255); font-size: 12.573px; text-align: start; margin-top: 0px !important; margin-bottom: 0px !important;&quot;&gt;Storage_Magic&lt;/pre&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="160" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-165" value="+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Magic_ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Property&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Diaspar_ID&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-164">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-166" value="Dinner" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="430" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-167" value="+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Dinner_ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(129, 161, 193); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Time&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(129, 161, 193); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Odvin_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Hidvar_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-166">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-168" value="&lt;pre style=&quot;font-family: var(--ds-font-family-code); overflow: auto; padding: calc(var(--ds-md-zoom)*8px)calc(var(--ds-md-zoom)*12px); text-wrap: wrap; word-break: break-all; color: rgb(255, 255, 255); font-size: 12.573px; text-align: start; margin-top: 0px !important; margin-bottom: 0px !important;&quot;&gt;Communication&lt;/pre&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="270" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-169" value="+&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Communication_ID&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Interpretation&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Odvin_ID&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 255, 255); font-family: var(--ds-font-family-code); font-size: 12.573px; text-wrap: wrap; background-color: initial;&quot;&gt;&amp;nbsp;Hidvar_ID&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="mVhNf065fgTi1jN2UXXa-168">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-193" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-125" target="mVhNf065fgTi1jN2UXXa-165">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1000" y="350" as="sourcePoint" />
+            <mxPoint x="1100" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1070" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-194" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-126">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1290" y="420" as="sourcePoint" />
+            <mxPoint x="1390" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-195" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=-0.023;entryY=0.651;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="mVhNf065fgTi1jN2UXXa-148">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="523" y="360" as="sourcePoint" />
+            <mxPoint x="500" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-196" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="mVhNf065fgTi1jN2UXXa-163">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="520" y="348" as="sourcePoint" />
+            <mxPoint x="490" y="185" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="175" />
+              <mxPoint x="590" y="190" />
+              <mxPoint x="280" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-197" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-134" target="mVhNf065fgTi1jN2UXXa-148">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="457" y="750" as="sourcePoint" />
+            <mxPoint x="557" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-198" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=0.576;exitY=-0.005;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.001;entryY=0.863;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-154" target="mVhNf065fgTi1jN2UXXa-148">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="650" y="820" as="sourcePoint" />
+            <mxPoint x="750" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-199" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="mVhNf065fgTi1jN2UXXa-124">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="180" y="630" as="sourcePoint" />
+            <mxPoint x="280" y="530" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1020" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-201" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-142" target="mVhNf065fgTi1jN2UXXa-169">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="-30" y="460" as="sourcePoint" />
+            <mxPoint x="70" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-202" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=-0.011;exitY=0.132;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-141" target="mVhNf065fgTi1jN2UXXa-167">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="240" y="560" as="sourcePoint" />
+            <mxPoint x="340" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-203" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-142">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="830" y="770" as="sourcePoint" />
+            <mxPoint x="930" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="770" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-204" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-142">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="620" y="525" as="sourcePoint" />
+            <mxPoint x="730" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-205" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-125" target="mVhNf065fgTi1jN2UXXa-159">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="920" y="430" as="sourcePoint" />
+            <mxPoint x="990" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-206" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="mVhNf065fgTi1jN2UXXa-125" target="mVhNf065fgTi1jN2UXXa-124">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1310" y="200" as="sourcePoint" />
+            <mxPoint x="1410" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mVhNf065fgTi1jN2UXXa-207" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="mVhNf065fgTi1jN2UXXa-132">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1250" y="380" as="sourcePoint" />
+            <mxPoint x="1211" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
