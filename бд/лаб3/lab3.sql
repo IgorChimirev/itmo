@@ -1,149 +1,133 @@
 -- Удаление таблиц с учетом зависимостей
-DROP TABLE IF EXISTS Storage_Influence CASCADE;
-DROP TABLE IF EXISTS Cultural_Affiliation CASCADE;
-DROP TABLE IF EXISTS Communication CASCADE;
-DROP TABLE IF EXISTS Shadow_Observation CASCADE;
-DROP TABLE IF EXISTS Dinner CASCADE;
-DROP TABLE IF EXISTS Cultural_Differences CASCADE;
-DROP TABLE IF EXISTS Odvin_Satisfaction CASCADE;
-DROP TABLE IF EXISTS Storage_Magic CASCADE;
-DROP TABLE IF EXISTS Mystery CASCADE;
-DROP TABLE IF EXISTS Diaspar_Person CASCADE;
-DROP TABLE IF EXISTS Forest_Inhabitants CASCADE;
-DROP TABLE IF EXISTS Night CASCADE;
-DROP TABLE IF EXISTS Memory_Storage CASCADE;
-DROP TABLE IF EXISTS Diaspar CASCADE;
-DROP TABLE IF EXISTS Person CASCADE;
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS 
+    storage_influence,
+    cultural_affiliation,
+    communication,
+    shadow_observation,
+    dinner,
+    cultural_differences,
+    odvin_satisfaction,
+    storage_magic,
+    mystery,
+    night,
+    forest_inhabitants,
+    diaspar_person,
+    diaspar,
+    memory_storage,
+    person;
+SET FOREIGN_KEY_CHECKS = 1;
 
--- Создание основных таблиц
-CREATE TABLE Person (
-    Person_ID SERIAL PRIMARY KEY,
-    Name VARCHAR(50) NOT NULL,
-    Gender VARCHAR(10),
-    Current_Location VARCHAR(100)
+-- Создание таблиц
+CREATE TABLE person (
+    person_id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    gender VARCHAR(10) CHECK (gender IN ('Мужской', 'Женский')),
+    current_location VARCHAR(100)
 );
 
-CREATE TABLE Diaspar (
-    Diaspar_ID SERIAL PRIMARY KEY,
-    Culture_City_Name VARCHAR(50) NOT NULL,
-    Location VARCHAR(100),
-    Parent_Diaspar_ID INT REFERENCES Diaspar(Diaspar_ID)
+CREATE TABLE diaspar (
+    diaspar_id INT PRIMARY KEY,
+    culture_city_name VARCHAR(50) NOT NULL,
+    location VARCHAR(100),
+    parent_diaspar_id INT,
+    FOREIGN KEY (parent_diaspar_id) REFERENCES diaspar(diaspar_id)
 );
 
-CREATE TABLE Forest_Inhabitants (
-    Inhabitant_ID SERIAL PRIMARY KEY,
-    Name VARCHAR(50) NOT NULL,
-    Location VARCHAR(100) DEFAULT 'Граница света и тьмы'
+CREATE TABLE odvin_satisfaction (
+    satisfaction_id INT PRIMARY KEY,
+    emotional_state VARCHAR(50) NOT NULL CHECK (emotional_state IN 
+        ('Спокойствие', 'Радость', 'Грусть', 'Удовлетворение')),
+    reason VARCHAR(100),
+    odvin_id INT NOT NULL,
+    FOREIGN KEY (odvin_id) REFERENCES person(person_id)
 );
 
-CREATE TABLE Night (
-    Night_ID SERIAL PRIMARY KEY,
-    Time_of_Day TIME NOT NULL,
-    Stars_Present BOOLEAN DEFAULT FALSE,
-    Total_Darkness BOOLEAN DEFAULT TRUE
+CREATE TABLE shadow_observation (
+    observation_id INT PRIMARY KEY,
+    start_time DATETIME NOT NULL,
+    end_time DATETIME,
+    CONSTRAINT chk_time CHECK (end_time IS NULL OR end_time > start_time)
 );
 
-CREATE TABLE Mystery (
-    Mystery_ID SERIAL PRIMARY KEY,
-    Description TEXT NOT NULL,
-    Related_Events TEXT,
-    Unsolved BOOLEAN DEFAULT TRUE,
-    Person_ID INT REFERENCES Person(Person_ID),
-    Diaspar_ID INT REFERENCES Diaspar(Diaspar_ID)
-);
+-- Триггеры
+DELIMITER //
 
--- Создание связующих таблиц
-CREATE TABLE Diaspar_Person (
-    ID SERIAL PRIMARY KEY,
-    Diaspar_ID INT NOT NULL REFERENCES Diaspar(Diaspar_ID),
-    Person_ID INT NOT NULL REFERENCES Person(Person_ID)
-);
-
--- Триггер 1: Установка Location по умолчанию для Forest_Inhabitants
-CREATE OR REPLACE FUNCTION set_default_forest_location()
-RETURNS TRIGGER AS $$
-BEGIN
-    IF NEW.Location IS NULL THEN
-        NEW.Location := 'Граница света и тьмы';
-    END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER before_forest_inhabitants_insert
-BEFORE INSERT ON Forest_Inhabitants
+-- Проверка иерархии городов
+CREATE TRIGGER trg_diaspar_hierarchy 
+BEFORE INSERT ON diaspar
 FOR EACH ROW
-EXECUTE FUNCTION set_default_forest_location();
-
--- Триггер 2: Проверка логики Stars_Present и Total_Darkness для Night
-CREATE OR REPLACE FUNCTION validate_night_darkness()
-RETURNS TRIGGER AS $$
 BEGIN
-    IF NEW.Stars_Present = TRUE AND NEW.Total_Darkness = TRUE THEN
-        RAISE EXCEPTION 'Невозможно одновременное наличие звезд и полной темноты';
+    IF NEW.parent_diaspar_id IS NOT NULL THEN
+        IF NOT EXISTS (
+            SELECT 1 FROM diaspar 
+            WHERE diaspar_id = NEW.parent_diaspar_id
+        ) THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Родительский город не существует';
+        END IF;
+        
+        IF NEW.parent_diaspar_id = NEW.diaspar_id THEN
+            SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Город не может быть родителем сам себе';
+        END IF;
     END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
+END//
 
-CREATE TRIGGER before_night_insert_update
-BEFORE INSERT OR UPDATE ON Night
+-- Автоматическое обновление локации персонажа
+CREATE TRIGGER trg_person_location 
+AFTER INSERT ON shadow_observation
 FOR EACH ROW
-EXECUTE FUNCTION validate_night_darkness();
-
--- Триггер 3: Обновление статуса тайны (Mystery.Unsolved)
-CREATE OR REPLACE FUNCTION update_mystery_status()
-RETURNS TRIGGER AS $$
 BEGIN
-    IF NEW.Related_Events ILIKE '%решено%' THEN
-        NEW.Unsolved := FALSE;
-    ELSIF NEW.Related_Events ILIKE '%неразгаданно%' THEN
-        NEW.Unsolved := TRUE;
-    END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
+    UPDATE person
+    SET current_location = 'Зона наблюдения'
+    WHERE person_id IN (
+        SELECT odvin_id 
+        FROM shadow_observation 
+        WHERE observation_id = NEW.observation_id
+    );
+END//
 
-CREATE TRIGGER before_mystery_update
-BEFORE UPDATE ON Mystery
+-- Валидация эмоционального состояния
+CREATE TRIGGER trg_emotion_validation 
+BEFORE UPDATE ON odvin_satisfaction
 FOR EACH ROW
-EXECUTE FUNCTION update_mystery_status();
-
--- Триггер 4: Запрет удаления Diaspar с жителями
-CREATE OR REPLACE FUNCTION prevent_diaspar_deletion()
-RETURNS TRIGGER AS $$
 BEGIN
-    IF EXISTS (SELECT 1 FROM Diaspar_Person WHERE Diaspar_ID = OLD.Diaspar_ID) THEN
-        RAISE EXCEPTION 'Нельзя удалить Diaspar с привязанными жителями!';
+    IF NEW.emotional_state = OLD.emotional_state THEN
+        SIGNAL SQLSTATE '01000'
+        SET MESSAGE_TEXT = 'Состояние не изменилось';
     END IF;
-    RETURN OLD;
-END;
-$$ LANGUAGE plpgsql;
+    
+    IF NEW.emotional_state = 'Радость' AND NEW.reason IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Требуется указать причину радости';
+    END IF;
+END//
 
-CREATE TRIGGER before_diaspar_delete
-BEFORE DELETE ON Diaspar
-FOR EACH ROW
-EXECUTE FUNCTION prevent_diaspar_deletion();
+DELIMITER ;
 
--- Пример заполнения данными
-INSERT INTO Person (Name, Gender) VALUES 
-('Одвин', 'M'),
-('Хидвар', 'M'),
-('Элис', 'F');
+-- Вставка тестовых данных
+INSERT INTO person (person_id, name, gender) VALUES
+(1, 'Одвин', 'Мужской'),
+(2, 'Хидвар', 'Мужской');
 
-INSERT INTO Diaspar (Culture_City_Name, Location) VALUES
-('Город Памяти', 'Координаты X:125 Y:340'),
-('Забытый Анклав', 'Неизвестно');
+INSERT INTO diaspar (diaspar_id, culture_city_name) VALUES
+(1, 'Диаспар'),
+(2, 'Лис');
 
-INSERT INTO Forest_Inhabitants (Name) VALUES ('Древний Дух');
+-- Тестовые сценарии
 
-INSERT INTO Night (Time_of_Day, Stars_Present) VALUES ('23:00:00', TRUE);
+-- 1. Нарушение гендерной проверки (должно вызвать ошибку)
+INSERT INTO person (person_id, name, gender) VALUES
+(3, 'Тест', 'Неизвестно');
 
-INSERT INTO Mystery (Description, Related_Events, Person_ID) VALUES 
-('Тайна исчезновения', 'Решено вчера', 1);
+-- 2. Создание циклической иерархии городов (должно вызвать ошибку)
+UPDATE diaspar SET parent_diaspar_id = 1 WHERE diaspar_id = 1;
 
--- Проверка работы триггеров
--- 1. Вставка в Forest_Inhabitants без Location (автоматическое назначение)
--- 2. Попытка вставить Night с Stars_Present=TRUE и Total_Darkness=TRUE (ошибка)
--- 3. Обновление Mystery с ключевым словом "решено" (Unsolved станет FALSE)
--- 4. Попытка удалить Diaspar с жителями (ошибка)
+-- 3. Попытка ввода некорректного времени наблюдения (должно вызвать ошибку)
+INSERT INTO shadow_observation (observation_id, start_time, end_time) VALUES
+(1, '2024-01-01 20:00:00', '2024-01-01 19:00:00');
+
+-- 4. Обновление эмоционального состояния без причины (должно вызвать ошибку)
+INSERT INTO odvin_satisfaction (satisfaction_id, emotional_state, odvin_id) VALUES
+(1, 'Радость', 1);
