@@ -116,18 +116,18 @@ INSERT INTO diaspar (diaspar_id, culture_city_name) VALUES
 
 -- Тестовые сценарии
 
--- 1. Нарушение гендерной проверки (должно вызвать ошибку)
+-- должно вызвать ошибку
 INSERT INTO person (person_id, name, gender) VALUES
 (3, 'Тест', 'Неизвестно');
 
--- 2. Создание циклической иерархии городов (должно вызвать ошибку)
+-- должно вызвать ошибку
 UPDATE diaspar SET parent_diaspar_id = 1 WHERE diaspar_id = 1;
 
--- 3. Попытка ввода некорректного времени наблюдения (должно вызвать ошибку)
+-- должно вызвать ошибку
 INSERT INTO shadow_observation (observation_id, start_time, end_time) VALUES
 (1, '2024-01-01 20:00:00', '2024-01-01 19:00:00');
 
--- 4. Обновление эмоционального состояния без причины (должно вызвать ошибку)
+-- должно вызвать ошибку
 INSERT INTO odvin_satisfaction (satisfaction_id, emotional_state, odvin_id) VALUES
 (1, 'Радость', 1);
 
