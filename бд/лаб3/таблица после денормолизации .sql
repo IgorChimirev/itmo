@@ -1,4 +1,4 @@
--- Удаление старых таблиц
+
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS 
     storage_influence,
@@ -18,7 +18,7 @@ DROP TABLE IF EXISTS
     person;
 SET FOREIGN_KEY_CHECKS = 1;
 
--- Создание таблиц
+
 CREATE TABLE person (
     person_id INT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
@@ -97,7 +97,7 @@ DELIMITER ;
 
 DELIMITER //
 CREATE TRIGGER validate_person_culture 
-BEFORE INSERT OR UPDATE ON person  -- Обработка INSERT и UPDATE
+BEFORE INSERT OR UPDATE ON person  
 FOR EACH ROW
 BEGIN
     IF NEW.current_culture NOT IN (SELECT culture_city_name FROM diaspar) THEN
