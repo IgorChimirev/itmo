@@ -1,4 +1,3 @@
--- Удаление таблиц с учетом зависимостей
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS 
     storage_influence,
@@ -18,7 +17,7 @@ DROP TABLE IF EXISTS
     person;
 SET FOREIGN_KEY_CHECKS = 1;
 
--- Создание таблиц
+
 CREATE TABLE person (
     person_id INT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
