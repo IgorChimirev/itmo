@@ -1,129 +1,150 @@
+-- Создание расширения PostGIS
+CREATE EXTENSION IF NOT EXISTS postgis;
 
-SET FOREIGN_KEY_CHECKS = 0;
-DROP TABLE IF EXISTS 
-    storage_influence,
-    cultural_affiliation,
-    communication,
-    shadow_observation,
-    dinner,
-    cultural_differences,
-    odvin_satisfaction,
-    storage_magic,
-    mystery,
-    night,
-    forest_inhabitants,
-    diaspar_person,
-    diaspar,
-    memory_storage,
-    person;
-SET FOREIGN_KEY_CHECKS = 1;
+-- Домены для валидации данных
+CREATE DOMAIN name_domain AS TEXT 
+CHECK (VALUE ~ '^[A-Z][a-zA-Z- ]{2,49}$');
 
+CREATE DOMAIN title_domain AS TEXT 
+CHECK (VALUE ~ '^[A-Z][a-zA-Z0-9- ]{4,49}$');
 
+CREATE DOMAIN location_domain AS TEXT 
+CHECK (VALUE ~ '^[A-Z][a-zA-Z0-9- ]{4,99}$');
+
+-- Пользовательские типы (ENUM)
+CREATE TYPE gender_type AS ENUM ('Male', 'Female', 'Other');
+CREATE TYPE transcript_category AS ENUM (
+    'Greeting', 'Question', 'Answer', 'Statement', 
+    'Request', 'Clarification', 'Farewell'
+);
+CREATE TYPE communication_status AS ENUM (
+    'Pending', 'Active', 'Completed', 'Interrupted'
+);
+CREATE TYPE magic_property AS ENUM (
+    'Time Protection', 'Memory Preservation', 'Cultural Integrity'
+);
+CREATE TYPE habitat_category AS ENUM (
+    'Light Border', 'Twilight Zone', 'Dark Realm'
+);
+CREATE TYPE interaction_method AS ENUM (
+    'Telepathy', 'Verbal', 'Symbolic'
+);
+CREATE TYPE interaction_category AS ENUM (
+    'Dinner', 'Conference', 'Joint Research'
+);
+CREATE TYPE mystery_location_type AS ENUM (
+    'Main Archive', 'Central Square', 'Memory Vault', 'Forest Perimeter'
+);
+CREATE TYPE behavior_action_type AS ENUM (
+    'Observing', 'Mimicking', 'Hiding', 'Communicating'
+);
+
+-- Таблица person (денормализована: добавлено country, удалена ссылка на city)
 CREATE TABLE person (
     person_id INT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    gender VARCHAR(10) CHECK (gender IN ('Мужской', 'Женский')),
-    current_location VARCHAR(100),
-    current_culture VARCHAR(50)
+    first_name name_domain NOT NULL,
+    last_name name_domain NOT NULL,
+    gender gender_type NOT NULL,
+    birth_date DATE CHECK (
+        birth_date > '1900-01-01' 
+        AND birth_date < CURRENT_DATE
+    ),
+    country location_domain NOT NULL  -- Ранее было в таблице city
 );
 
-CREATE TABLE shadow_observation (
-    observation_id INT PRIMARY KEY,
-    start_time DATETIME NOT NULL,
-    end_time DATETIME,
-    night_time VARCHAR(50),
-    inhabitant_location VARCHAR(100),
-    CONSTRAINT chk_time CHECK (end_time IS NULL OR end_time > start_time)
+-- Таблица memory_storage (денормализована: объединена с storage_magic)
+CREATE TABLE memory_storage (
+    storage_id INT PRIMARY KEY,
+    title title_domain NOT NULL UNIQUE,
+    coordinates geography(Point) NOT NULL,
+    construction_year INT NOT NULL 
+        CHECK (construction_year BETWEEN 1000 AND EXTRACT(YEAR FROM CURRENT_DATE)),
+    -- Поля из storage_magic
+    magic_type magic_property NOT NULL DEFAULT 'Time Protection',
+    activation_date DATE NOT NULL 
+        CHECK (activation_date > '1900-01-01' AND activation_date <= CURRENT_DATE),
+    deactivation_date DATE 
+        CHECK (deactivation_date > activation_date AND deactivation_date <= CURRENT_DATE)
 );
 
-CREATE TABLE dinner (
-    dinner_id INT PRIMARY KEY,
-    time DATETIME,
-    odvin_id INT,
-    hidvar_id INT,
-    odvin_name VARCHAR(50),
-    hidvar_name VARCHAR(50),
-    FOREIGN KEY (odvin_id) REFERENCES person(person_id),
-    FOREIGN KEY (hidvar_id) REFERENCES person(person_id)
-);
-
+-- Таблица diaspar
 CREATE TABLE diaspar (
     diaspar_id INT PRIMARY KEY,
-    culture_city_name VARCHAR(50) NOT NULL,
-    location VARCHAR(100),
-    parent_diaspar_id INT,
-    FOREIGN KEY (parent_diaspar_id) REFERENCES diaspar(diaspar_id)
+    culture_name title_domain NOT NULL UNIQUE,
+    founding_year INT NOT NULL CHECK (founding_year > 0),
+    parent_diaspar_id INT REFERENCES diaspar(diaspar_id),
+    CONSTRAINT hierarchy_integrity CHECK (diaspar_id != parent_diaspar_id)
 );
 
-CREATE TABLE odvin_satisfaction (
-    satisfaction_id INT PRIMARY KEY,
-    emotional_state VARCHAR(50) NOT NULL CHECK (emotional_state IN 
-        ('Спокойствие', 'Радость', 'Грусть', 'Удовлетворение')),
-    reason VARCHAR(100),
-    odvin_id INT NOT NULL,
-    FOREIGN KEY (odvin_id) REFERENCES person(person_id)
+-- Таблица forest_inhabitants
+CREATE TABLE forest_inhabitants (
+    inhabitant_id INT PRIMARY KEY,
+    species_name title_domain NOT NULL UNIQUE,
+    habitat habitat_category NOT NULL,
+    first_contact_date DATE NOT NULL 
+        CHECK (first_contact_date > '1900-01-01' AND first_contact_date <= CURRENT_DATE)
 );
 
--- Триггеры
-DELIMITER //
-CREATE TRIGGER fill_dinner_names 
-BEFORE INSERT ON dinner
-FOR EACH ROW
-BEGIN
-    -- Проверка существования ID
-    IF NOT EXISTS (SELECT 1 FROM person WHERE person_id = NEW.odvin_id) THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Odvin_id не существует';
-    END IF;
-    IF NOT EXISTS (SELECT 1 FROM person WHERE person_id = NEW.hidvar_id) THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Hidvar_id не существует';
-    END IF;
-    -- Заполнение имен
-    SET NEW.odvin_name = (SELECT name FROM person WHERE person_id = NEW.odvin_id);
-    SET NEW.hidvar_name = (SELECT name FROM person WHERE person_id = NEW.hidvar_id);
-END//
-DELIMITER ;
+-- Таблица mystery (денормализована: добавлены данные из person и diaspar)
+CREATE TABLE mystery (
+    mystery_id INT PRIMARY KEY,
+    mystery_subject title_domain NOT NULL,
+    mystery_action title_domain NOT NULL,
+    mystery_object title_domain,
+    mystery_location mystery_location_type NOT NULL,
+    discovery_date DATE NOT NULL 
+        CHECK (discovery_date > '2000-01-01' AND discovery_date <= CURRENT_DATE),
+    is_unsolved BOOLEAN NOT NULL DEFAULT TRUE,
+    -- Заменены внешние ключи на текстовые поля
+    reporter_first_name name_domain NOT NULL,
+    reporter_last_name name_domain NOT NULL,
+    diaspar_culture_name title_domain NOT NULL  -- Из таблицы diaspar
+);
 
-DELIMITER //
-CREATE TRIGGER check_observation_time 
-BEFORE INSERT ON shadow_observation
-FOR EACH ROW
-BEGIN
-    IF NEW.end_time IS NOT NULL AND NEW.end_time <= NEW.start_time THEN
-        SIGNAL SQLSTATE '45000' 
-        SET MESSAGE_TEXT = 'Время окончания должно быть позже начала';
-    END IF;
-END//
-DELIMITER ;
+-- Остальные таблицы (без изменений)
+CREATE TABLE shadow_observation (
+    observation_id INT PRIMARY KEY,
+    observer_id INT NOT NULL REFERENCES person(person_id),
+    inhabitant_id INT NOT NULL REFERENCES forest_inhabitants(inhabitant_id),
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP CHECK (end_time > start_time AND end_time <= CURRENT_TIMESTAMP),
+    behavior_subject title_domain NOT NULL,
+    behavior_action behavior_action_type NOT NULL,
+    behavior_location location_domain NOT NULL
+);
 
-DELIMITER //
-CREATE TRIGGER validate_person_culture 
-BEFORE INSERT OR UPDATE ON person  
-FOR EACH ROW
-BEGIN
-    IF NEW.current_culture NOT IN (SELECT culture_city_name FROM diaspar) THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Культура не существует в таблице Diaspar';
-    END IF;
-END//
-DELIMITER ;
-1. Триггер fill_dinner_names
-При попытке добавить новую запись в таблицу ужинов (dinner)
+CREATE TABLE cultural_interaction (
+    interaction_id INT PRIMARY KEY,
+    interaction_date DATE NOT NULL 
+        CHECK (interaction_date > '1900-01-01' AND interaction_date <= CURRENT_DATE),
+    odvin_culture_id INT NOT NULL REFERENCES diaspar(diaspar_id),
+    hidvar_culture_id INT NOT NULL REFERENCES diaspar(diaspar_id),
+    interaction_type interaction_category NOT NULL,
+    CONSTRAINT culture_check CHECK (odvin_culture_id != hidvar_culture_id)
+);
 
-Проверяет существование персонажей с odvin_id и hidvar_id в таблице person
+CREATE TABLE diaspar_membership (
+    diaspar_id INT NOT NULL REFERENCES diaspar(diaspar_id),
+    person_id INT NOT NULL REFERENCES person(person_id),
+    membership_start DATE NOT NULL 
+        CHECK (membership_start > '1900-01-01' AND membership_start <= CURRENT_DATE),
+    membership_end DATE 
+        CHECK (membership_end > membership_start AND membership_end <= CURRENT_DATE),
+    PRIMARY KEY (diaspar_id, person_id)
+);
 
-Если ID не существуют → вызывает ошибку "Odvin_id/Hidvar_id не существует"
+CREATE TABLE intercultural_communication (
+    communication_id INT PRIMARY KEY,
+    communication_date DATE NOT NULL 
+        CHECK (communication_date > '1900-01-01' AND communication_date <= CURRENT_DATE),
+    initiator_id INT NOT NULL REFERENCES person(person_id),
+    receiver_id INT NOT NULL REFERENCES person(person_id),
+    method interaction_method NOT NULL,
+    transcript transcript_category NOT NULL,
+    community communication_status NOT NULL,
+    CONSTRAINT participant_check CHECK (initiator_id != receiver_id)
+);
 
-Если ID валидны → автоматически подставляет имена участников из таблицы person в поля odvin_name и hidvar_name
-
-2. Триггер check_observation_time
-При создании записи о наблюдении в shadow_observation
-
-Проверяет, что время окончания наблюдения (end_time) не раньше времени начала (start_time)
-
-При нарушении временной логики → вызывает ошибку "Время окончания должно быть позже начала"
-3 Триггер validate_person_culture
-При создании или изменении персонажа в person
-
-Проверяет, что указанная культура (current_culture) существует в таблице городов-культур diaspar
-
-При попытке указать несуществующую культуру → вызывает ошибку "Культура не существует в таблице Diaspar"
+-- Удаление более не нужных таблиц
+DROP TABLE IF EXISTS storage_magic;
+DROP TABLE IF EXISTS city;
