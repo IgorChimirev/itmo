@@ -1,15 +1,48 @@
+-- Удаление существующих объектов (если нужно пересоздать БД)
+DROP TABLE IF EXISTS 
+    epidemic_mutation,
+    storage_magic,
+    intercultural_communication,
+    diaspar_membership,
+    cultural_interaction,
+    shadow_observation,
+    mystery,
+    forest_inhabitants,
+    diaspar,
+    memory_storage,
+    person,
+    city CASCADE;
+
+DROP TYPE IF EXISTS 
+    behavior_action_type,
+    mystery_location_type,
+    interaction_category,
+    interaction_method,
+    habitat_category,
+    magic_property,
+    communication_status,
+    transcript_category,
+    gender_type CASCADE;
+
+DROP DOMAIN IF EXISTS 
+    location_domain,
+    title_domain,
+    name_domain CASCADE;
+
+DROP EXTENSION IF EXISTS postgis CASCADE;
+
 -- Активация PostGIS
 CREATE EXTENSION IF NOT EXISTS postgis;
 
--- Домены
+-- Исправленные домены (дефис в конце диапазона)
 CREATE DOMAIN name_domain AS TEXT 
-CHECK (VALUE ~ '^[A-Z][a-zA-Z- ]{2,49}$');
+CHECK (VALUE ~ '^[A-Z][a-zA-Z -]{2,49}$');
 
 CREATE DOMAIN title_domain AS TEXT 
-CHECK (VALUE ~ '^[A-Z][a-zA-Z0-9- ]{4,49}$');
+CHECK (VALUE ~ '^[A-Z][a-zA-Z0-9 ()\-]{4,49}$');  -- Экранирован дефис
 
 CREATE DOMAIN location_domain AS TEXT 
-CHECK (VALUE ~ '^[A-Z][a-zA-Z0-9- ]{4,99}$');
+CHECK (VALUE ~ '^[A-Z][a-zA-Z0-9 -]{4,99}$');
 
 -- Перечисления (ENUM)
 CREATE TYPE gender_type AS ENUM ('Male', 'Female', 'Other');
@@ -151,7 +184,7 @@ CREATE TABLE intercultural_communication (
     CONSTRAINT participant_check CHECK (initiator_id != receiver_id)
 );
 
--- Дополнительные таблицы для эпидемии
+-- Таблица для эпидемии
 CREATE TABLE epidemic_mutation (
     mutation_id SERIAL PRIMARY KEY,
     person_id INT REFERENCES person(person_id),
@@ -160,7 +193,7 @@ CREATE TABLE epidemic_mutation (
     description TEXT
 );
 
--- Функции и триггеры
+-- Исправленная функция для триггера
 CREATE OR REPLACE FUNCTION handle_epidemic()
 RETURNS TRIGGER AS $$
 DECLARE
@@ -168,68 +201,73 @@ DECLARE
     infected_count INT;
     total_population INT;
 BEGIN
-    IF NEW.infection_date IS NOT NULL AND OLD.infection_date IS NULL THEN
-        -- Мутация лесных обитателей
-        UPDATE forest_inhabitants 
-        SET species_name = species_name || ' (Mutated)',
-            aggression_level = aggression_level * 2
-        WHERE inhabitant_id IN (
-            SELECT inhabitant_id 
-            FROM shadow_observation 
-            WHERE observer_id = NEW.person_id
-        );
-
-        -- Проверка условий для города
-        current_city := NEW.city_name;
-        SELECT COUNT(*) INTO infected_count 
-        FROM person 
-        WHERE city_name = current_city 
-        AND infection_date IS NOT NULL;
-
-        SELECT COUNT(*) INTO total_population 
-        FROM person 
-        WHERE city_name = current_city;
-
-        INSERT INTO epidemic_mutation (person_id, city_name, description)
-        VALUES (NEW.person_id, current_city, 'Initial infection detected');
-
-        -- Активация карантина
-        IF infected_count >= 5 THEN
-            UPDATE city 
-            SET quarantine_start_date = CURRENT_DATE 
-            WHERE city_name = current_city;
-        END IF;
-
-        -- Заброшенность города
-        IF (infected_count::FLOAT / total_population) > 0.5 THEN
-            UPDATE city 
-            SET abandoned = TRUE 
-            WHERE city_name = current_city;
-
-            UPDATE cultural_interaction 
-            SET status = 'Cancelled'
-            WHERE odvin_culture_id IN (
-                SELECT diaspar_id 
-                FROM diaspar 
-                WHERE culture_name = current_city
-            ) OR hidvar_culture_id IN (
-                SELECT diaspar_id 
-                FROM diaspar 
-                WHERE culture_name = current_city
+    -- Обработка обновлений таблицы person
+    IF TG_TABLE_NAME = 'person' THEN
+        IF NEW.infection_date IS NOT NULL AND OLD.infection_date IS NULL THEN
+            -- Мутация существ
+            UPDATE forest_inhabitants 
+            SET species_name = species_name || ' - Mutated',
+                aggression_level = aggression_level * 2
+            WHERE inhabitant_id IN (
+                SELECT inhabitant_id 
+                FROM shadow_observation 
+                WHERE observer_id = NEW.person_id
             );
+
+            -- Проверка условий для города
+            current_city := NEW.city_name;
+            SELECT COUNT(*) INTO infected_count 
+            FROM person 
+            WHERE city_name = current_city 
+            AND infection_date IS NOT NULL;
+
+            SELECT COUNT(*) INTO total_population 
+            FROM person 
+            WHERE city_name = current_city;
+
+            INSERT INTO epidemic_mutation (person_id, city_name, description)
+            VALUES (NEW.person_id, current_city, 'Initial infection detected');
+
+            -- Активация карантина
+            IF infected_count >= 5 THEN
+                UPDATE city 
+                SET quarantine_start_date = CURRENT_DATE 
+                WHERE city_name = current_city;
+            END IF;
+
+            -- Заброшенность города
+            IF (infected_count::FLOAT / total_population) > 0.5 THEN
+                UPDATE city 
+                SET abandoned = TRUE 
+                WHERE city_name = current_city;
+
+                UPDATE cultural_interaction 
+                SET status = 'Cancelled'
+                WHERE odvin_culture_id IN (
+                    SELECT diaspar_id 
+                    FROM diaspar 
+                    WHERE culture_name = current_city
+                ) OR hidvar_culture_id IN (
+                    SELECT diaspar_id 
+                    FROM diaspar 
+                    WHERE culture_name = current_city
+                );
+            END IF;
         END IF;
-    END IF;
 
-    -- Снятие карантина
-    IF TG_TABLE_NAME = 'city' AND NEW.quarantine_start_date IS NOT NULL THEN
-        IF (CURRENT_DATE - NEW.quarantine_start_date) >= 30 THEN
-            UPDATE person 
-            SET infection_date = NULL 
-            WHERE city_name = NEW.city_name;
+    -- Обработка обновлений таблицы city
+    ELSIF TG_TABLE_NAME = 'city' THEN
+        -- Снятие карантина через 30 дней
+        IF NEW.quarantine_start_date IS NOT NULL THEN
+            IF (CURRENT_DATE - NEW.quarantine_start_date) >= 30 THEN
+                UPDATE person 
+                SET infection_date = NULL 
+                WHERE city_name = NEW.city_name;
 
-            UPDATE city 
-            SET quarantine_start_date = NULL 
-            WHERE city_name = NEW.city_name;
+                UPDATE city 
+                SET quarantine_start_date = NULL 
+                WHERE city_name = NEW.city_name;
+            END IF;
         END IF;
     END IF;
 
@@ -248,3 +286,35 @@ AFTER UPDATE ON city
 FOR EACH ROW
 WHEN (NEW.quarantine_start_date IS NOT NULL)
 EXECUTE FUNCTION handle_epidemic();
+
+-- Тестовые данные
+INSERT INTO city (city_name, country) 
+VALUES 
+    ('New Atlantis', 'Atlantis'),
+    ('El Dorado', 'Amazonia');
+
+INSERT INTO person (person_id, first_name, last_name, gender, birth_date, city_name)
+VALUES 
+    (1, 'John', 'Smith', 'Male', '1980-05-15', 'New Atlantis'),
+    (2, 'Emma', 'Watson', 'Female', '1995-12-01', 'New Atlantis'),
+    (3, 'Liam', 'Brown', 'Other', '2000-08-20', 'El Dorado');
+
+INSERT INTO forest_inhabitants (inhabitant_id, species_name, habitat, first_contact_date)
+VALUES 
+    (101, 'Shadow Wolf', 'Twilight Zone', '2020-01-10'),
+    (102, 'Crystal Deer', 'Light Border', '2019-03-05');
+
+INSERT INTO shadow_observation (observation_id, observer_id, inhabitant_id, start_time, end_time, behavior_subject, behavior_action, behavior_location)
+VALUES 
+    (1001, 1, 101, '2023-10-01 08:00:00', '2023-10-01 10:00:00', 'Hunting', 'Observing', 'New Atlantis'),
+    (1002, 2, 102, '2023-10-02 09:00:00', '2023-10-02 11:00:00', 'Grazing', 'Observing', 'El Dorado');
+
+-- Активация заражения
+UPDATE person 
+SET infection_date = CURRENT_DATE 
+WHERE person_id = 1;
+
+-- Проверка мутации
+SELECT species_name, aggression_level 
+FROM forest_inhabitants 
+WHERE inhabitant_id = 101;
