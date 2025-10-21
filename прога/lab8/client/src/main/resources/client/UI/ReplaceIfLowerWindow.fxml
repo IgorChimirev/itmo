@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="replaceIfLowerPane" prefHeight="200.0" prefWidth="300.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="client.UI.ReplaceIfLowerController">
+
+    <Label layoutX="20.0" layoutY="20.0" text="%key_label"/>
+    <TextField fx:id="keyField" layoutX="120.0" layoutY="20.0" prefWidth="150.0"/>
+
+    <Label layoutX="20.0" layoutY="60.0" text="%new_distance_label"/>
+    <TextField fx:id="distanceField" layoutX="120.0" layoutY="60.0" prefWidth="150.0"/>
+
+    <Button fx:id="submitButton" layoutX="100.0" layoutY="110.0" text="%submit"
+            onAction="#handleSubmit"/>
+
+    <Label fx:id="messageLabel" layoutX="20.0" layoutY="150.0" prefWidth="260.0"
+           textFill="#ff0000"/>
+
+</AnchorPane>
