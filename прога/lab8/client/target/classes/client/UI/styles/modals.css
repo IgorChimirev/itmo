@@ -1,0 +1,18 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #ecf0f1;
+}
+
+.custom-button {
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+}
+
+.custom-field {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}

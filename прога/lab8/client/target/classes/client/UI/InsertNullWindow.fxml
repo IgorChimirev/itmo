@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="insertNullPane" prefHeight="600.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="client.UI.InsertNullWindowController">
+
+    <!-- Ключ -->
+    <TextField fx:id="keyForm" layoutX="50.0" layoutY="30.0" prefWidth="300.0" promptText="%enter_key"/>
+
+    <!-- Основные поля -->
+    <TextField fx:id="nameForm" layoutX="50.0" layoutY="70.0" prefWidth="300.0" />
+    <TextField fx:id="coordXForm" layoutX="50.0" layoutY="110.0" prefWidth="140.0" />
+    <TextField fx:id="coordYForm" layoutX="210.0" layoutY="110.0" prefWidth="140.0" />
+    <TextField fx:id="distanceFrom" layoutX="50.0" layoutY="150.0" prefWidth="300.0" />
+
+    <!-- LocationFrom -->
+    <TextField fx:id="fromXForm" layoutX="50.0" layoutY="190.0" prefWidth="90.0" />
+    <TextField fx:id="fromYForm" layoutX="150.0" layoutY="190.0" prefWidth="90.0" />
+    <TextField fx:id="fromZForm" layoutX="250.0" layoutY="190.0" prefWidth="90.0" />
+    <TextField fx:id="fromNameForm" layoutX="50.0" layoutY="230.0" prefWidth="300.0" />
+
+    <!-- LocationTo -->
+    <TextField fx:id="toXForm" layoutX="50.0" layoutY="270.0" prefWidth="90.0" />
+    <TextField fx:id="toYForm" layoutX="150.0" layoutY="270.0" prefWidth="90.0" />
+    <TextField fx:id="toZForm" layoutX="250.0" layoutY="270.0" prefWidth="90.0" />
+    <TextField fx:id="toNameForm" layoutX="50.0" layoutY="310.0" prefWidth="300.0" />
+
+    <!-- Кнопка и сообщения -->
+    <Button fx:id="insertSubmitButton" layoutX="150.0" layoutY="360.0" text="%submit" />
+    <Label fx:id="messageLabel" layoutX="50.0" layoutY="400.0" prefWidth="300.0" textFill="#ff0000" />
+
+</AnchorPane>
