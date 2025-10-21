@@ -1,0 +1,398 @@
+2025-04-16 09:50:00.185 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 09:50:00.189 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 09:50:05.367 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:05.368 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=50181,localport=8000]
+2025-04-16 09:50:10.608 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:10.609 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 09:50:10.615 [Thread-0] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-16 09:50:10.615 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:10.616 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 09:50:10.921 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 09:50:10.921 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 09:50:17.138 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:17.138 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 09:50:17.145 [Thread-2] INFO  Modules.Server - Пользователь 123 успешно зарегистрирован
+2025-04-16 09:50:17.145 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:17.146 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 09:50:17.447 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 166
+2025-04-16 09:50:17.447 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 09:50:36.342 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:36.343 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 893 байт пришло от клиента
+2025-04-16 09:50:36.358 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:36.359 [Thread-5] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 09:50:36.664 [Thread-5] INFO  Modules.Server - Отправлен последний пакет байтов длины: 166
+2025-04-16 09:50:36.664 [Thread-5] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 09:50:44.826 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:44.827 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-16 09:50:44.831 [Thread-6] INFO  Modules.Server - Запрос:
+show
+
+null
+Успешно обработан
+2025-04-16 09:50:44.832 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 09:50:44.833 [Thread-7] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 09:50:45.138 [Thread-7] INFO  Modules.Server - Отправлен последний пакет байтов длины: 148
+2025-04-16 09:50:45.139 [Thread-7] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:49:44.306 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 10:49:44.310 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 10:49:53.006 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:49:53.006 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=50659,localport=8000]
+2025-04-16 10:49:57.260 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:49:57.262 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:49:57.271 [Thread-0] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-16 10:49:57.271 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:49:57.273 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:49:57.579 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:49:57.579 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:02.736 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:02.737 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:50:02.747 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:02.747 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:03.050 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:03.051 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:05.474 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:05.475 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 305 байт пришло от клиента
+2025-04-16 10:50:05.479 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:05.480 [Thread-5] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:05.785 [Thread-5] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:05.786 [Thread-5] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:10.811 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:10.812 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:50:10.816 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:10.816 [Thread-7] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:11.118 [Thread-7] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:11.118 [Thread-7] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:15.024 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:15.025 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:50:15.028 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:15.029 [Thread-9] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:15.334 [Thread-9] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:15.335 [Thread-9] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:19.302 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:19.302 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - -1 байт пришло от клиента
+2025-04-16 10:50:19.314 [main] INFO  Modules.Server - Клиент java.nio.channels.SocketChannel[connected local=/127.0.0.1:8000 remote=/127.0.0.1:50659] отключился
+2025-04-16 10:50:21.290 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:21.290 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=50673,localport=8000]
+2025-04-16 10:50:24.067 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:24.068 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:50:24.070 [Thread-11] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-16 10:50:24.070 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:24.071 [Thread-12] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:24.377 [Thread-12] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:24.377 [Thread-12] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:30.573 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:30.573 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:50:30.578 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:30.579 [Thread-14] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:30.885 [Thread-14] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:30.885 [Thread-14] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:38.527 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:38.527 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - -1 байт пришло от клиента
+2025-04-16 10:50:38.531 [main] INFO  Modules.Server - Клиент java.nio.channels.SocketChannel[connected local=/127.0.0.1:8000 remote=/127.0.0.1:50673] отключился
+2025-04-16 10:50:38.882 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:38.883 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=50681,localport=8000]
+2025-04-16 10:50:41.931 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:41.932 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:50:41.933 [Thread-16] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-16 10:50:41.933 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:41.933 [Thread-17] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:42.238 [Thread-17] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:42.239 [Thread-17] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:50:49.188 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:49.188 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:50:49.191 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:50:49.192 [Thread-19] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:50:49.494 [Thread-19] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:50:49.496 [Thread-19] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:51:32.029 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:51:32.029 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - -1 байт пришло от клиента
+2025-04-16 10:51:32.033 [main] INFO  Modules.Server - Клиент java.nio.channels.SocketChannel[connected local=/127.0.0.1:8000 remote=/127.0.0.1:50681] отключился
+2025-04-16 10:51:40.447 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 10:51:40.451 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 10:51:42.591 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:51:42.591 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=50704,localport=9000]
+2025-04-16 10:51:46.364 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:51:46.367 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:51:46.373 [Thread-0] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-16 10:51:46.374 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:51:46.375 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:51:46.681 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:51:46.681 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 10:51:51.273 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:51:51.274 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 10:51:51.283 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 10:51:51.284 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 10:51:51.590 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 10:51:51.591 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 13:48:38.974 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 13:48:38.978 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 13:48:43.246 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:48:43.247 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=57641,localport=9000]
+2025-04-16 13:48:47.187 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:48:47.191 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 13:48:47.199 [Thread-0] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-16 13:48:47.199 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:48:47.201 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 13:48:47.506 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 13:48:47.507 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 13:48:52.815 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:48:52.816 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 13:48:52.831 [Thread-2] ERROR Modules.Server - Ошибка при регистрации
+java.lang.RuntimeException: Ошибка регистрации: ERROR: permission denied for sequence users_id_seq
+	at Modules.DBProvider.addUser(DBProvider.java:50) ~[classes/:?]
+	at Modules.Server.processRequest(Server.java:180) ~[classes/:?]
+	at java.lang.Thread.run(Thread.java:1575) [?:?]
+2025-04-16 13:48:52.835 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:48:52.836 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 13:48:53.141 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 241
+2025-04-16 13:48:53.142 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 13:51:48.100 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 13:51:48.104 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 13:51:51.937 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:51:51.938 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=57700,localport=9000]
+2025-04-16 13:51:55.409 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:51:55.412 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 13:51:55.420 [Thread-0] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-16 13:51:55.420 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:51:55.422 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 13:51:55.726 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-16 13:51:55.727 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 13:52:00.812 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:52:00.813 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 13:52:00.821 [Thread-2] INFO  Modules.Server - Пользователь 123 зарегистрирован
+2025-04-16 13:52:00.822 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:52:00.822 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 13:52:01.128 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 192
+2025-04-16 13:52:01.128 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 13:53:21.774 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:53:21.775 [ForkJoinPool.commonPool-worker-2] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-16 13:53:21.780 [Thread-4] INFO  Modules.Server - Запрос:
+help
+
+null
+Успешно обработан
+2025-04-16 13:53:21.781 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:53:21.782 [Thread-5] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 13:53:21.782 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:21.783 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:21.783 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:21.783 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:22.088 [Thread-5] INFO  Modules.Server - Отправлен последний пакет байтов длины: 30
+2025-04-16 13:53:22.089 [Thread-5] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 13:53:31.780 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:53:31.780 [ForkJoinPool.commonPool-worker-2] INFO  Modules.Server - 893 байт пришло от клиента
+2025-04-16 13:53:31.792 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:53:31.793 [Thread-7] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 13:53:31.793 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:31.793 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:31.794 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:31.794 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-16 13:53:32.097 [Thread-7] INFO  Modules.Server - Отправлен последний пакет байтов длины: 30
+2025-04-16 13:53:32.098 [Thread-7] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 13:53:39.081 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:53:39.082 [ForkJoinPool.commonPool-worker-2] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-16 13:53:39.083 [Thread-8] INFO  Modules.Server - Запрос:
+show
+
+null
+Успешно обработан
+2025-04-16 13:53:39.084 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 13:53:39.085 [Thread-9] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 13:53:39.388 [Thread-9] INFO  Modules.Server - Отправлен последний пакет байтов длины: 148
+2025-04-16 13:53:39.389 [Thread-9] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:08:37.721 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 14:08:37.725 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 14:08:40.344 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:08:40.345 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=57800,localport=9000]
+2025-04-16 14:08:45.213 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:08:45.215 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 14:08:45.221 [Thread-0] INFO  Modules.Server - Пользователь 123 успешно аутентифицирован
+2025-04-16 14:08:45.222 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:08:45.223 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:08:45.528 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:08:45.529 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:09:06.767 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:06.768 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 893 байт пришло от клиента
+2025-04-16 14:09:06.782 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:06.783 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:09:07.088 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:09:07.089 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:09:12.256 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:12.257 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-16 14:09:12.262 [Thread-4] INFO  Modules.Server - Запрос:
+show
+
+null
+Успешно обработан
+2025-04-16 14:09:12.262 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:12.263 [Thread-5] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:09:12.564 [Thread-5] INFO  Modules.Server - Отправлен последний пакет байтов длины: 148
+2025-04-16 14:09:12.565 [Thread-5] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:09:22.598 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:22.599 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 312 байт пришло от клиента
+2025-04-16 14:09:22.600 [Thread-6] INFO  Modules.Server - Запрос:
+ad
+
+null
+Успешно обработан
+2025-04-16 14:09:22.601 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:22.601 [Thread-7] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:09:22.907 [Thread-7] INFO  Modules.Server - Отправлен последний пакет байтов длины: 204
+2025-04-16 14:09:22.908 [Thread-7] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:09:30.764 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:30.765 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 892 байт пришло от клиента
+2025-04-16 14:09:30.770 [Thread-8] INFO  Modules.Server - Запрос:
+aDD
+
+RouteModel [ID=null, Name='32', Coordinates=Координаты: (x=32.0, y=332.0), Created=Wed Apr 16 14:09:30 MSK 2025, From=LocationFrom [x=32,00, y=32,00, z=3, name='32'], To=LocationTo [x=2,00, y=32,00, z=3, name='32'], Distance=2,00]
+Успешно обработан
+2025-04-16 14:09:30.770 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:30.771 [Thread-9] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:09:31.076 [Thread-9] INFO  Modules.Server - Отправлен последний пакет байтов длины: 204
+2025-04-16 14:09:31.077 [Thread-9] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:09:31.077 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:31.077 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 311 байт пришло от клиента
+2025-04-16 14:09:31.078 [Thread-10] INFO  Modules.Server - Запрос:
+3
+
+null
+Успешно обработан
+2025-04-16 14:09:31.078 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:31.078 [Thread-11] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:09:31.384 [Thread-11] INFO  Modules.Server - Отправлен последний пакет байтов длины: 204
+2025-04-16 14:09:31.384 [Thread-11] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:09:35.675 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:35.676 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 313 байт пришло от клиента
+2025-04-16 14:09:35.677 [Thread-12] INFO  Modules.Server - Запрос:
+223
+
+null
+Успешно обработан
+2025-04-16 14:09:35.678 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:35.679 [Thread-13] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:09:35.984 [Thread-13] INFO  Modules.Server - Отправлен последний пакет байтов длины: 204
+2025-04-16 14:09:35.985 [Thread-13] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:09:44.409 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:44.410 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-16 14:09:44.411 [Thread-14] INFO  Modules.Server - Запрос:
+show
+
+null
+Успешно обработан
+2025-04-16 14:09:44.412 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:09:44.412 [Thread-15] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:09:44.716 [Thread-15] INFO  Modules.Server - Отправлен последний пакет байтов длины: 148
+2025-04-16 14:09:44.717 [Thread-15] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:10:05.152 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:10:05.152 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 892 байт пришло от клиента
+2025-04-16 14:10:05.156 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:10:05.157 [Thread-17] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:10:05.462 [Thread-17] INFO  Modules.Server - Отправлен последний пакет байтов длины: 148
+2025-04-16 14:10:05.463 [Thread-17] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:26:20.822 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 14:26:20.825 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 14:26:24.010 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:24.011 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=58017,localport=9000]
+2025-04-16 14:26:27.122 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:27.124 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 14:26:27.132 [Thread-0] INFO  Modules.Server - Пользователь 123 успешно аутентифицирован
+2025-04-16 14:26:27.133 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:27.134 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:26:27.441 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:26:27.442 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:26:34.894 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:34.894 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 893 байт пришло от клиента
+2025-04-16 14:26:34.907 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:34.908 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:26:35.214 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:26:35.215 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:26:54.968 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:54.968 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 892 байт пришло от клиента
+2025-04-16 14:26:54.972 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:54.972 [Thread-5] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:26:55.273 [Thread-5] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:26:55.273 [Thread-5] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:26:58.542 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:58.542 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-16 14:26:58.547 [Thread-6] INFO  Modules.Server - Запрос:
+show
+
+null
+Успешно обработан
+2025-04-16 14:26:58.548 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:26:58.548 [Thread-7] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:26:58.854 [Thread-7] INFO  Modules.Server - Отправлен последний пакет байтов длины: 148
+2025-04-16 14:26:58.855 [Thread-7] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:45:31.078 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 14:45:31.081 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 14:45:35.776 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:45:35.777 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=58133,localport=9000]
+2025-04-16 14:45:39.784 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:45:39.786 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 14:45:39.804 [Thread-0] INFO  Modules.Server - Пользователь 123 успешно аутентифицирован
+2025-04-16 14:45:39.805 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:45:39.806 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:45:40.113 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:45:40.114 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:45:44.484 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:45:44.485 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - -1 байт пришло от клиента
+2025-04-16 14:45:44.488 [Thread-2] INFO  Modules.Server - Пользователь 123 успешно аутентифицирован
+2025-04-16 14:45:44.489 [main] INFO  Modules.Server - Клиент java.nio.channels.SocketChannel[connected local=/127.0.0.1:9000 remote=/127.0.0.1:58133] отключился
+2025-04-16 14:47:33.465 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-16 14:47:33.469 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-16 14:47:38.289 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:47:38.290 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=58177,localport=9000]
+2025-04-16 14:47:40.988 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:47:40.990 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-16 14:47:40.998 [Thread-0] INFO  Modules.Server - Пользователь 123 успешно аутентифицирован
+2025-04-16 14:47:40.999 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:47:41.000 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:47:41.306 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:47:41.307 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:47:50.694 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:47:50.695 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 892 байт пришло от клиента
+2025-04-16 14:47:50.707 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:47:50.708 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-16 14:47:51.013 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 135
+2025-04-16 14:47:51.014 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-16 14:54:53.822 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-16 14:54:53.823 [ForkJoinPool.commonPool-worker-2] INFO  Modules.Server - -1 байт пришло от клиента
+2025-04-16 14:54:53.826 [main] INFO  Modules.Server - Клиент java.nio.channels.SocketChannel[connected local=/127.0.0.1:9000 remote=/127.0.0.1:58177] отключился

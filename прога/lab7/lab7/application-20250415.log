@@ -1,0 +1,99 @@
+2025-04-15 13:37:45.069 [main] INFO  Modules.Server - Коллекция загружена успешно
+2025-04-15 13:37:45.073 [main] INFO  Modules.Server - Канал сервера готов к работе
+2025-04-15 13:37:53.267 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:37:53.268 [main] INFO  Modules.Server - Установлено соединение с клиентом Socket[addr=/127.0.0.1,port=56751,localport=8000]
+2025-04-15 13:37:59.346 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:37:59.349 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-15 13:37:59.366 [Thread-0] INFO  Modules.Server - Пользователя 123 не существует
+2025-04-15 13:37:59.367 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:37:59.369 [Thread-1] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:37:59.676 [Thread-1] INFO  Modules.Server - Отправлен последний пакет байтов длины: 171
+2025-04-15 13:37:59.677 [Thread-1] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:38:14.297 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:38:14.298 [ForkJoinPool.commonPool-worker-1] INFO  Modules.Server - 306 байт пришло от клиента
+2025-04-15 13:38:14.305 [Thread-2] INFO  Modules.Server - Пользователь 213 успешно зарегистрирован
+2025-04-15 13:38:14.306 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:38:14.307 [Thread-3] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:38:14.613 [Thread-3] INFO  Modules.Server - Отправлен последний пакет байтов длины: 166
+2025-04-15 13:38:14.613 [Thread-3] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:41:38.152 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:41:38.153 [ForkJoinPool.commonPool-worker-2] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-15 13:41:38.158 [Thread-4] INFO  Modules.Server - Запрос:
+help
+
+null
+Успешно обработан
+2025-04-15 13:41:38.158 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:41:38.159 [Thread-5] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:41:38.160 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:38.160 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:38.160 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:38.160 [Thread-5] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:38.465 [Thread-5] INFO  Modules.Server - Отправлен последний пакет байтов длины: 30
+2025-04-15 13:41:38.466 [Thread-5] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:41:48.497 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:41:48.498 [ForkJoinPool.commonPool-worker-2] INFO  Modules.Server - 891 байт пришло от клиента
+2025-04-15 13:41:48.510 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:41:48.510 [Thread-7] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:41:48.511 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:48.511 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:48.511 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:48.511 [Thread-7] INFO  Modules.Server - Отправлен пакет байтов длины: 256
+2025-04-15 13:41:48.816 [Thread-7] INFO  Modules.Server - Отправлен последний пакет байтов длины: 30
+2025-04-15 13:41:48.817 [Thread-7] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:41:58.777 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:41:58.778 [ForkJoinPool.commonPool-worker-2] INFO  Modules.Server - 314 байт пришло от клиента
+2025-04-15 13:41:58.779 [Thread-8] INFO  Modules.Server - Запрос:
+show
+
+null
+Успешно обработан
+2025-04-15 13:41:58.780 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:41:58.781 [Thread-9] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:41:59.086 [Thread-9] INFO  Modules.Server - Отправлен последний пакет байтов длины: 148
+2025-04-15 13:41:59.087 [Thread-9] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:52:59.783 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:52:59.786 [ForkJoinPool.commonPool-worker-3] INFO  Modules.Server - 317 байт пришло от клиента
+2025-04-15 13:52:59.790 [Thread-10] INFO  Modules.Server - Запрос:
+history
+
+null
+Успешно обработан
+2025-04-15 13:52:59.791 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:52:59.791 [Thread-11] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:53:00.094 [Thread-11] INFO  Modules.Server - Отправлен последний пакет байтов длины: 182
+2025-04-15 13:53:00.094 [Thread-11] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:53:06.626 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:53:06.626 [ForkJoinPool.commonPool-worker-3] INFO  Modules.Server - 893 байт пришло от клиента
+2025-04-15 13:53:06.629 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:53:06.630 [Thread-13] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:53:06.935 [Thread-13] INFO  Modules.Server - Отправлен последний пакет байтов длины: 182
+2025-04-15 13:53:06.936 [Thread-13] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:53:06.937 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:53:06.937 [ForkJoinPool.commonPool-worker-3] INFO  Modules.Server - 311 байт пришло от клиента
+2025-04-15 13:53:06.938 [Thread-14] INFO  Modules.Server - Запрос:
+3
+
+null
+Успешно обработан
+2025-04-15 13:53:06.938 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:53:06.939 [Thread-15] INFO  Modules.Server - Отправлен пакет с длинной сообщения
+2025-04-15 13:53:07.244 [Thread-15] INFO  Modules.Server - Отправлен последний пакет байтов длины: 204
+2025-04-15 13:53:07.245 [Thread-15] INFO  Modules.Server - Отправлен стоп пакет
+
+2025-04-15 13:53:14.918 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:53:14.918 [ForkJoinPool.commonPool-worker-3] INFO  Modules.Server - 315 байт пришло от клиента
+2025-04-15 13:53:14.919 [Thread-16] INFO  Modules.Server - Запрос:
+12add
+
+null
+Успешно обработан
+2025-04-15 13:53:14.920 [main] INFO  Modules.Server - Обработка ключа началась
+2025-04-15 13:53:14.920 [Thread-17] INFO  Modules.Server - Отправлен пакет 
